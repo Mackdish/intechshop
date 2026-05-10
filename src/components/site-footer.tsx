@@ -6,17 +6,6 @@ import { SocialLinks } from "@/components/social-links";
 export function SiteFooter() {
   return (
     <footer className="bg-brand-dark text-white/85 mt-12">
-      {/* Logo Section */}
-      <div className="border-b border-white/10 py-6">
-        <div className="container mx-auto px-4 flex justify-center">
-          <img 
-            src="/intech-logo.png" 
-            alt="Intech Computer Limited - We Bridge IT to the Real World" 
-            className="h-20 w-auto"
-          />
-        </div>
-      </div>
-
       <div className="container mx-auto px-4 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 mb-4">
