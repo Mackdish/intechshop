@@ -21,21 +21,7 @@ export function MobileBottomNav() {
   return (
     <>
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-border shadow-lg">
-        <div className="grid grid-cols-5 gap-1 px-1 py-2">
-          {/* Account */}
-          <Link
-            to="/account"
-            className={cn(
-              "flex flex-col items-center justify-center gap-1 p-2 rounded-lg text-xs font-medium transition-colors",
-              isActive("/account")
-                ? "bg-primary text-primary-foreground"
-                : "text-foreground hover:bg-accent"
-            )}
-          >
-            <User className="h-5 w-5" />
-            <span className="line-clamp-1">Account</span>
-          </Link>
-
+        <div className="grid grid-cols-4 gap-1 px-1 py-2">
           {/* Cart */}
           <Link
             to="/cart"
