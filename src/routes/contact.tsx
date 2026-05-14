@@ -26,9 +26,9 @@ function ContactPage() {
 
         <div className="grid lg:grid-cols-2 gap-8">
           <div className="space-y-5">
-            <InfoRow icon={<MapPin className="h-5 w-5" />} title="Address" body="Moi Avenue, Nairobi, Kenya" />
+            <InfoRow icon={<MapPin className="h-5 w-5" />} title="Address" body="World Business Centre, 3rd Floor" />
             <InfoRow icon={<Phone className="h-5 w-5" />} title="Phone" body={<a href="tel:+254728394362" className="hover:text-primary">+254 728 394 362</a>} />
-            <InfoRow icon={<Mail className="h-5 w-5" />} title="Email" body={<a href="mailto:info@intechcomputershop.co.ke" className="hover:text-primary break-all">info@intechcomputershop.co.ke</a>} />
+            <InfoRow icon={<Mail className="h-5 w-5" />} title="Email" body={<a href="mailto:sales@intechcomputershop.co.ke" className="hover:text-primary break-all">sales@intechcomputershop.co.ke</a>} />
             <InfoRow icon={<Clock className="h-5 w-5" />} title="Hours" body={<>Mon–Sat 8:30am – 6:30pm<br />Sun 10am – 4pm</>} />
 
             <div className="pt-4">

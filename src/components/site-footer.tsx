@@ -51,7 +51,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-primary-glow" />
-              <span>Moi Avenue, Nairobi, Kenya</span>
+              <span>World Business Centre, 3rd Floor</span>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-primary-glow" />
@@ -59,8 +59,8 @@ export function SiteFooter() {
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-primary-glow" />
-              <a href="mailto:info@intechcomputershop.co.ke" className="hover:text-primary-glow break-all">
-                info@intechcomputershop.co.ke
+              <a href="mailto:sales@intechcomputershop.co.ke" className="hover:text-primary-glow break-all">
+                sales@intechcomputershop.co.ke
               </a>
             </li>
           </ul>
