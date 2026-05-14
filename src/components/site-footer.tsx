@@ -79,7 +79,6 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-4 text-xs text-white/60 flex flex-col sm:flex-row justify-between gap-2">
           <div>© {new Date().getFullYear()} Intech Computer Shop. All rights reserved.</div>
-          <div>Made with ♥ in Nairobi</div>
           <div>Designed by <a href="tel:+254705186502" className="text-primary-glow hover:text-white">Mackdish Solutions (0705186502)</a></div>
         </div>
       </div>
