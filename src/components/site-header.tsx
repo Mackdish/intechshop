@@ -61,8 +61,8 @@ export function SiteHeader() {
             <a href="tel:+254728394362" className="flex items-center gap-1.5 hover:text-white">
               <Phone className="h-3 w-3" /><span>+254 728 394 362</span>
             </a>
-            <a href="mailto:info@intechcomputershop.co.ke" className="flex items-center gap-1.5 hover:text-white">
-              <Mail className="h-3 w-3" /><span>info@intechcomputershop.co.ke</span>
+            <a href="mailto:sales@intechcomputershop.co.ke" className="flex items-center gap-1.5 hover:text-white">
+              <Mail className="h-3 w-3" /><span>sales@intechcomputershop.co.ke</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
