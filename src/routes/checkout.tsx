@@ -8,6 +8,7 @@ import { CheckCircle2, Smartphone, Truck, Lock, MessageCircle } from "lucide-rea
 import { ShippingSelector } from "@/components/shipping-selector";
 import { calcShippingCost, getZoneById } from "@/lib/shipping";
 import { supabase } from "@/integrations/supabase/client";
+import { FallbackImage } from "@/components/fallback-image";
 
 export const Route = createFileRoute("/checkout")({
   head: () => ({ meta: [{ title: "Checkout — Intech Computer Shop" }] }),
@@ -263,17 +264,12 @@ function CheckoutPage() {
               {items.map((i) => (
                 <div key={i.product.id} className="flex gap-2 items-center text-sm">
                   <div className={`h-12 w-12 rounded overflow-hidden shrink-0 ${i.product.bg}`}>
-                    {i.product.imageUrl ? (
-                      <img
-                        src={i.product.imageUrl}
-                        alt={i.product.name}
-                        className="h-full w-full object-cover"
-                      />
-                    ) : (
-                      <div className="grid place-items-center h-full w-full text-2xl">
-                        {i.product.image}
-                      </div>
-                    )}
+                    <FallbackImage
+                      src={i.product.imageUrl}
+                      alt={i.product.name}
+                      className="h-full w-full object-cover"
+                      fallback={<div className="grid place-items-center h-full w-full text-2xl">{i.product.image}</div>}
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="line-clamp-1 text-xs font-medium">{i.product.name}</div>

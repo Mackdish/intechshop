@@ -4,6 +4,7 @@ import { KES, type Product } from "@/lib/catalog";
 import { useCart, useWishlist } from "@/lib/store";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { FallbackImage } from "@/components/fallback-image";
 
 export function ProductCard({ product, compact }: { product: Product; compact?: boolean }) {
   const add = useCart((s) => s.add);
@@ -29,18 +30,17 @@ export function ProductCard({ product, compact }: { product: Product; compact?: 
         params={{ id: product.id }}
         className={cn("relative block aspect-square overflow-hidden w-full", product.bg)}
       >
-        {product.imageUrl ? (
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            loading="lazy"
-            className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
-          />
-        ) : (
-          <div className="absolute inset-0 grid place-items-center text-7xl sm:text-8xl group-hover:scale-110 transition-transform duration-300">
-            {product.image}
-          </div>
-        )}
+        <FallbackImage
+          src={product.imageUrl}
+          alt={product.name}
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fallback={
+            <div className="absolute inset-0 grid place-items-center text-7xl sm:text-8xl group-hover:scale-110 transition-transform duration-300">
+              {product.image}
+            </div>
+          }
+        />
         {product.badge && (
           <span className={cn("absolute top-2 left-2 text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded", badgeStyles[product.badge])}>
             {product.badge === "flash" ? "Flash Deal" : product.badge}

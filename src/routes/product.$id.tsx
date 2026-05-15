@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site-layout";
 import { ProductCard } from "@/components/product-card";
+import { FallbackImage } from "@/components/fallback-image";
 import { findCategory, findProduct, KES, PRODUCTS } from "@/lib/catalog";
 import { useCart, useWishlist } from "@/lib/store";
 import { useState } from "react";
@@ -65,11 +66,12 @@ function ProductPage() {
         {/* Image gallery */}
         <div>
           <div className={cn("aspect-square rounded-xl border border-border overflow-hidden shadow-card", product.bg)}>
-            {product.imageUrl ? (
-              <img src={product.imageUrl} alt={product.name} className="h-full w-full object-cover" />
-            ) : (
-              <div className="grid place-items-center text-9xl">{product.image}</div>
-            )}
+            <FallbackImage
+              src={product.imageUrl}
+              alt={product.name}
+              className="h-full w-full object-cover"
+              fallback={<div className="grid place-items-center text-9xl">{product.image}</div>}
+            />
           </div>
           <div className="mt-3 grid grid-cols-4 gap-2">
             {[(product.imageUrl ?? product.image), "📦", "✨", "🛡️"].map((g, i) => (
