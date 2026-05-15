@@ -169,9 +169,6 @@ function AccountPage() {
         <div className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {[
             { icon: Heart, title: "Wishlist", desc: "Items you've saved", to: "/wishlist" as const },
-            { icon: MapPin, title: "Addresses", desc: "Shipping locations" },
-            { icon: KeyRound, title: "Change Password", desc: "Keep your account safe" },
-            { icon: ShieldCheck, title: "Profile", desc: "Update your details" },
             { icon: LogOut, title: "Logout", desc: "End your session", action: handleLogout },
           ].map((c) => {
             const inner = (
